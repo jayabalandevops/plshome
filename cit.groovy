@@ -3,13 +3,13 @@ node ("$NodeName"){
     stage("Prepare"){
         println("Preparing...")
         git(
-            url: git@github.com:jayabalandevops/plshome.git,
-            branch: master
+            url: "git@github.com:jayabalandevops/plshome.git",
+            branch: "master"
         )
         dir('config'){
             git(
-                url: git@github.com:jayabalandevops/confhome.git,
-                branch: master
+                url: "git@github.com:jayabalandevops/confhome.git",
+                branch: "master"
             )
         }
         println("Prepared the workspace for groovy scripts and configurations from git repos.")
